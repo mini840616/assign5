@@ -5,10 +5,10 @@ class Bar {
   float len;
   float h = 10;
   
-  void move() {
-    
-    x = constrain(mouseX,0+bar.len/2,width-bar.len/2);
-  }
+//  void move() {
+//    
+//    x = constrain(mouseX,0+bar.len/2,width-bar.len/2);
+//  }
   
   void display() {
     fill(barColor);   
