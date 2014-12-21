@@ -56,7 +56,7 @@ void draw() {
     //call function
     drawLife();
     bar.display(); //Draw Bar on the Screen
-    bar.move();
+    //bar.move();
     drawBricks();
     drawBall();
     barCatchBall();
@@ -430,9 +430,10 @@ void checkBrickHit() {
 
     //ball stop on the middle of the bar
     void mouseMoved() {
+      bar.x = constrain(mouseX,0+bar.len/2,width-bar.len/2);
       if (ball.launch == false ) {
         ball.x = bar.x;
-        ball.y = bar.y -10;
+        ball.y = bar.y - bar.h;
       }
     }
 
@@ -460,4 +461,3 @@ void checkBrickHit() {
         ball.size *= 0.5 ;
       }
     }
-
